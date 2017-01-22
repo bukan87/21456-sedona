@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <head class="main_header">
+      <div class="main_menu">
+        <ul class="left">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+        </ul>
+        <a href="index.html" class="top_logo"></a>
+        <ul class="right">
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="#">Гостиницы</a></li>
+        </ul>
+      </div>
+    </head>
+    <main>
+      <form class="" action="index.html" method="post">
+        <div class="infrastructure">
+          <p class="header">Инфраструктура:</p>
+          <label>
+            <input type="checkbox" name="pool">
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox" name="parking">
+            Парковка
+          </label>
+          <label>
+            <input type="checkbox" name="wi_fi">
+            wi-fi
+          </label>
+        </div>
+        <div class="hous_type">
+          <label>
+            <input type="checkbox" name="hotel">
+            Гостиница
+          </label>
+          <label>
+            <input type="checkbox" name="motel">
+            Мотель
+          </label>
+          <label>
+            <input type="checkbox" name="apartment">
+            Апартаменты
+          </label>
+        </div>
+        <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
+        <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
+        <div class="price">
+          <label>
+            Стоимость в сутки(Р):
+
+          </label>
+        </div>
+        <input type="submit" name="start_search" value="Показать">
+      </form>
+      <div class="search_result">
+        <div class="header">
+          <p class="thesis">Найдено: 3</p>
+          <form class="sort_result" action="index.html" method="post">
+            <p>Сортировка:</p>
+            <input type="radio" name="sort" value="price" id="sort_result_price">
+            <label for="sort_result_price">По цене</label>
+            <input type="radio" name="sort" value="type" id="sort_result_type">
+            <label for="sort_result_type">По типу</label>
+            <input type="radio" name="sort" value="rating" id="sort_result_rating">
+            <label for="sort_result_rating">По рэйтингу</label>
+          </form>
+          <div class="arrows">
+            <button type="button" class="btn up"></button>
+            <button type="button" class="btn down"></button>
+          </div>
+        </div>
+        <div class="result_list">
+          <article class="hotel">
+            <img src="#" alt="hotel">
+            <div class="hotel_description">
+              <p class="thesis">Amara resort & spa</p>
+              <p class="definition">Гостиница от 4000 р.</p>
+              <a class="detail" href="#">Подробнее</a>
+              <a class="book" href="#">Забронировать</a>
+            </div>
+            <div class="ratio">
+              <ul class="stars">
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+              </ul>
+              <p>Рейтинг: 8,5</p>
+            </div>
+          </article>
+          <article class="hotel">
+            <img src="#" alt="hotel">
+            <div class="hotel_description">
+              <p class="thesis">Desert quail inn</p>
+              <p class="definition">Мотель от 3000 р.</p>
+              <a class="detail" href="#">Подробнее</a>
+              <a class="book" href="#">Забронировать</a>
+            </div>
+            <div class="ratio">
+              <ul class="stars">
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+              </ul>
+              <p>Рейтинг: 8,9</p>
+            </div>
+          </article>
+          <article class="hotel">
+            <img src="#" alt="hotel">
+            <div class="hotel_description">
+              <p class="thesis">Villas at poco diablo</p>
+              <p class="definition">Апартаменты от 2000 р.</p>
+              <a class="detail" href="#">Подробнее</a>
+              <a class="book" href="#">Забронировать</a>
+            </div>
+            <div class="ratio">
+              <ul class="stars">
+                <li>
+                  <div class="star"></div>
+                </li>
+                <li>
+                  <div class="star"></div>
+                </li>
+              </ul>
+              <p>Рейтинг: 9,2</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="main_footer">
+      <div class="container">
+        <p class="thesis">#sedona</p>
+        <div class="footer-social">
+          <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
+        </div>
+        <a href="https://up.htmlacademy.ru"></a>
+      </div>
+    </footer>
+  </body>
+</html>
