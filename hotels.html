@@ -35,7 +35,7 @@
             wi-fi
           </label>
         </fieldset>
-        <fieldset class="hous_type">
+        <fieldset class="house_type">
           <legend>Тип жилья:</legend>
           <label>
             <input type="checkbox" name="hotel">
@@ -52,14 +52,18 @@
         </fieldset>
         <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
         <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
-        <div class="price">
+        <fieldset class="price">
+          <legend>Стоимость в сутки(Р):</legend>
           <label>
-            Стоимость в сутки(Р):
+            От:
             <input type="number" name="" value="">
-            <input type="number" name="" value="">
-            <input type="range" name="" value="">
           </label>
-        </div>
+          <label>
+            До:
+            <input type="number" name="" value="">
+          </label>
+          <input type="range" name="" value="">
+        </fieldset>
         <input type="submit" name="start_search" value="Показать">
       </form>
       <div class="search_result">
@@ -71,8 +75,8 @@
             <a href="#">По рэйтингу</a>
           </div>
           <div class="arrows">
-            <button type="button" class="btn up"></button>
-            <button type="button" class="btn down"></button>
+            <a class="desc" href="#">По убыванию</a>
+            <a class="ask" href="#">По возрастанию</a>
           </div>
         </div>
         <div class="result_list">
@@ -86,10 +90,10 @@
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li class="star"> </li>
-                <li class="star"> </li>
-                <li class="star"> </li>
-                <li class="star"> </li>
+                <li class="star">*</li>
+                <li class="star">*</li>
+                <li class="star">*</li>
+                <li class="star">*</li>
               </ul>
               <p>Рейтинг: 8,5</p>
             </div>
@@ -104,9 +108,9 @@
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li class="star"> </li>
-                <li class="star"> </li>
-                <li class="star"> </li>
+                <li class="star">*</li>
+                <li class="star">*</li>
+                <li class="star">*</li>
               </ul>
               <p>Рейтинг: 8,9</p>
             </div>
@@ -121,8 +125,8 @@
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li class="star"> </li>
-                <li class="star"> </li>
+                <li class="star">*</li>
+                <li class="star">*</li>
               </ul>
               <p>Рейтинг: 9,2</p>
             </div>

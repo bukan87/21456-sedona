@@ -78,30 +78,34 @@
           <h3>Заинтересовались?</h3>
           <p class="definition">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <form class="search" action="index.html" method="post">
-          <p class="search_header">Поиск гостиниц в Седоне</p>
-          <div class="input_date">
-            <label>Дата заезда:</label>
-            <input type="date" name="check_in_date">
-          </div>
-          <div class="input_date">
-            <label>Дата выезда:</label>
-            <input type="date" name="check_out_date">
-          </div>
-          <div class="input_num">
-            <label>Взрослые:</label>
-            <button class="btn down" type="button">-</button>
-            <input type="number">
-            <button class="btn up" type="button">+</button>
-          </div>
-          <div class="input_num">
-            <label>Дети:</label>
-            <button class="btn down" type="button">-</button>
-            <input type="number">
-            <button class="btn up" type="button">+</button>
-          </div>
-          <input type="submit" name="start_search" value="Найти">
-        </form>
+        <div class="search_container">
+          <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
+          <form class="search" action="index.html" method="post">
+            <div class="input_date">
+              <label>Дата заезда:</label>
+              <input type="date" name="check_in_date">
+              <button class="calendar" type="button"></button>
+            </div>
+            <div class="input_date">
+              <label>Дата выезда:</label>
+              <input type="date" name="check_out_date">
+              <button class="calendar" type="button"></button>
+            </div>
+            <div class="input_num">
+              <label>Взрослые:</label>
+              <button class="btn down" type="button">-</button>
+              <input type="number">
+              <button class="btn up" type="button">+</button>
+            </div>
+            <div class="input_num">
+              <label>Дети:</label>
+              <button class="btn down" type="button">-</button>
+              <input type="number">
+              <button class="btn up" type="button">+</button>
+            </div>
+            <input type="submit" name="start_search" value="Найти">
+          </form>
+        </div>
       </div>
     </main>
     <footer class="main_footer">
