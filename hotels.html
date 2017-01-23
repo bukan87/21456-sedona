@@ -5,23 +5,23 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <head class="main_header">
-      <div class="main_menu">
+    <header class="main_header">
+      <nav>
         <ul class="left">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
         </ul>
-        <a href="index.html" class="top_logo"></a>
         <ul class="right">
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
-      </div>
-    </head>
+      </nav>
+      <a href="index.html" class="top_logo"><img src="" alt="Логотип"></a>
+    </header>
     <main>
       <form class="" action="index.html" method="post">
-        <div class="infrastructure">
-          <p class="header">Инфраструктура:</p>
+        <fieldset class="infrastructure">
+          <legend>Инфраструктура:</legend>
           <label>
             <input type="checkbox" name="pool">
             Бассейн
@@ -34,8 +34,9 @@
             <input type="checkbox" name="wi_fi">
             wi-fi
           </label>
-        </div>
-        <div class="hous_type">
+        </fieldset>
+        <fieldset class="hous_type">
+          <legend>Тип жилья:</legend>
           <label>
             <input type="checkbox" name="hotel">
             Гостиница
@@ -48,13 +49,15 @@
             <input type="checkbox" name="apartment">
             Апартаменты
           </label>
-        </div>
+        </fieldset>
         <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
         <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
         <div class="price">
           <label>
             Стоимость в сутки(Р):
-
+            <input type="number" name="" value="">
+            <input type="number" name="" value="">
+            <input type="range" name="" value="">
           </label>
         </div>
         <input type="submit" name="start_search" value="Показать">
@@ -62,15 +65,11 @@
       <div class="search_result">
         <div class="header">
           <p class="thesis">Найдено: 3</p>
-          <form class="sort_result" action="index.html" method="post">
-            <p>Сортировка:</p>
-            <input type="radio" name="sort" value="price" id="sort_result_price">
-            <label for="sort_result_price">По цене</label>
-            <input type="radio" name="sort" value="type" id="sort_result_type">
-            <label for="sort_result_type">По типу</label>
-            <input type="radio" name="sort" value="rating" id="sort_result_rating">
-            <label for="sort_result_rating">По рэйтингу</label>
-          </form>
+          <div class="sort_result">
+            <a class="current_page" href="#">По цене</a>
+            <a href="#">По типу</a>
+            <a href="#">По рэйтингу</a>
+          </div>
           <div class="arrows">
             <button type="button" class="btn up"></button>
             <button type="button" class="btn down"></button>
@@ -80,25 +79,17 @@
           <article class="hotel">
             <img src="#" alt="hotel">
             <div class="hotel_description">
-              <p class="thesis">Amara resort & spa</p>
+              <a class="name" href="#">Amara resort & spa</a>
               <p class="definition">Гостиница от 4000 р.</p>
               <a class="detail" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
               </ul>
               <p>Рейтинг: 8,5</p>
             </div>
@@ -106,22 +97,16 @@
           <article class="hotel">
             <img src="#" alt="hotel">
             <div class="hotel_description">
-              <p class="thesis">Desert quail inn</p>
+              <a class="name" href="#">Desert quail inn</a>
               <p class="definition">Мотель от 3000 р.</p>
               <a class="detail" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
               </ul>
               <p>Рейтинг: 8,9</p>
             </div>
@@ -129,19 +114,15 @@
           <article class="hotel">
             <img src="#" alt="hotel">
             <div class="hotel_description">
-              <p class="thesis">Villas at poco diablo</p>
+              <a class="name" href="#">Villas at poco diablo</a>
               <p class="definition">Апартаменты от 2000 р.</p>
               <a class="detail" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
             <div class="ratio">
               <ul class="stars">
-                <li>
-                  <div class="star"></div>
-                </li>
-                <li>
-                  <div class="star"></div>
-                </li>
+                <li class="star"> </li>
+                <li class="star"> </li>
               </ul>
               <p>Рейтинг: 9,2</p>
             </div>
@@ -157,7 +138,10 @@
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
         </div>
-        <a href="https://up.htmlacademy.ru"></a>
+        <div class="producer">
+          <p>Website by</p>
+          <a href="https://up.htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
   </body>

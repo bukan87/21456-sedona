@@ -5,22 +5,24 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <head class="main_header">
-      <div class="main_menu">
+    <header class="main_header">
+      <nav>
         <ul class="left">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
         </ul>
-        <a href="index.html" class="top_logo"></a>
         <ul class="right">
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
-      </div>
-    </head>
+      </nav>
+      <a href="index.html" class="top_logo"><img src="" alt="Логотип"></a>
+    </header>
     <main class="container">
-      <img class="main_logo" src="#" alt="Sedona">
-      <div class="header">
+      <div class="main_logo">
+        <img src="#" alt="Sedona ""Because Grand Canyon sucks""">
+      </div>
+      <div class="why_sedona">
         <p class="thesis">Седона - небольшой городок, заслуживающий большего!</p>
         <p class="definition">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
@@ -34,15 +36,15 @@
       </div>
       <div class="recomends">
         <div class="recomend housing">
-          <p class="thesis">Жилье</p>
+          <p class="recomend_thesis">Жилье</p>
           <p class="definition">Рекомендуем пожить в настоящем мотеле, все как в кино</p>
         </div>
         <div class="recomend food">
-          <p class="thesis">Еда</p>
+          <p class="recomend_thesis">Еда</p>
           <p class="definition">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="recomend souvenirs">
-          <p class="thesis">Сувениры</p>
+          <p class="recomend_thesis">Сувениры</p>
           <p class="definition">Не только китайского, но и местного производства!</p>
         </div>
       </div>
@@ -54,46 +56,50 @@
           <p class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </div>
-      <div class="recomends">
-        <div class="recomend">
-          <p class="thesis">Небольшая площадь</p>
-          <p class="definition">- №3 -</p>
-          <p class="definition">Все достопрримечательности находятся очень близко</p>
+      <div class="small_advantages">
+        <div class="advantage">
+          <p class="header">Небольшая площадь</p>
+          <p class="num">- №3 -</p>
+          <p class="description">Все достопрримечательности находятся очень близко</p>
         </div>
-        <div class="recomend">
+        <div class="advantage">
           <p class="thesis">Красивая дорога</p>
-          <p class="definition">- №4 -</p>
-          <p class="definition">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="num">- №4 -</p>
+          <p class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="recomend">
+        <div class="advantage">
           <p class="thesis">Мало туристов</p>
-          <p class="definition">- №5 -</p>
-          <p class="definition">Большинство туристов едет в Гранд Каньон и толпится там</p>
+          <p class="num">- №5 -</p>
+          <p class="description">Большинство туристов едет в Гранд Каньон и толпится там</p>
         </div>
       </div>
       <div class="search_hotel">
         <div class="interested">
           <h3>Заинтересовались?</h3>
           <p class="definition">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <p class="search_header">Поиск гостиниц в Седоне</p>
         </div>
         <form class="search" action="index.html" method="post">
-          <label>
-            Дата заезда:
+          <p class="search_header">Поиск гостиниц в Седоне</p>
+          <div class="input_date">
+            <label>Дата заезда:</label>
             <input type="date" name="check_in_date">
-          </label>
-          <label>
-            Дата выезда:
+          </div>
+          <div class="input_date">
+            <label>Дата выезда:</label>
             <input type="date" name="check_out_date">
-          </label>
-          <label>
-            Взрослые:
-            <input type="number" value="1" min="1" max="10" step="1">
-          </label>
-          <label>
-            Дети:
-            <input type="number" value="0" min="0" max="10" step="1">
-          </label>
+          </div>
+          <div class="input_num">
+            <label>Взрослые:</label>
+            <button class="btn down" type="button">-</button>
+            <input type="number">
+            <button class="btn up" type="button">+</button>
+          </div>
+          <div class="input_num">
+            <label>Дети:</label>
+            <button class="btn down" type="button">-</button>
+            <input type="number">
+            <button class="btn up" type="button">+</button>
+          </div>
           <input type="submit" name="start_search" value="Найти">
         </form>
       </div>
@@ -106,7 +112,10 @@
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
         </div>
-        <a href="https://up.htmlacademy.ru"></a>
+        <div class="producer">
+          <p>Website by</p>
+          <a href="https://up.htmlacademy.ru"></a>
+        </div>
       </div>
     </footer>
   </body>
