@@ -12,16 +12,16 @@
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
         </ul>
+        <a href="index.html" class="top_logo"><img src="./img/main_menu_logo.png" alt="Логотип"></a>
         <ul class="right">
           <li><a href="#">Карта штата</a></li>
           <li><a href="#">Гостиницы</a></li>
         </ul>
       </nav>
-      <a href="index.html" class="top_logo"><img src="./img/main_menu_logo.png" alt="Логотип"></a>
     </header>
     <main class="container">
       <div class="main_logo">
-        <img src="./img/welcome_text.png" alt="Sedona ">
+        <img class="welcome" src="./img/welcome_text.png" width="458" height="352" alt="Sedona">
       </div>
       <div class="why_sedona">
         <p class="thesis">Седона - небольшой городок, заслуживающий большего!</p>
@@ -31,9 +31,9 @@
         <div class="text_description">
           <p class="header">Настоящий городок</p>
           <p class="num">- №1 -</p>
-          <p class="description">Седона - не атракцион для туристов, там течет своя жизнь</p>
+          <p class="description">СЕДОНА — НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
         </div>
-        <img class="photo" src="./img/advantages/1.jpg" alt="Настоящий городок">
+        <div class="photo first"></div>
       </div>
       <div class="recomends">
         <div class="recomend housing">
@@ -50,78 +50,80 @@
         </div>
       </div>
       <div class="advantages">
-        <img class="photo" src="./img/advantages/2.jpg" alt="Мост дьявола">
+        <div class="photo second"></div>
         <div class="text_description">
-          <p class="header">Там есть мост дьявола</p>
+          <p class="header">Там есть<br> мост дьявола</p>
           <p class="num">- №2 -</p>
           <p class="description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </div>
-      <div class="small_advantages">
+      <div class="advantages small">
         <div class="advantage">
           <p class="header">Небольшая площадь</p>
           <p class="num">- №3 -</p>
-          <p class="description">Все достопрримечательности находятся очень близко</p>
+          <p class="description">ВСЕ достопримечательности <br>находятся очень близко</p>
         </div>
         <div class="advantage">
-          <p class="thesis">Красивая дорога</p>
+          <p class="header">Красивая дорога</p>
           <p class="num">- №4 -</p>
-          <p class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="description">ХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем <br>НЕ СКУЧНО!</p>
         </div>
         <div class="advantage">
-          <p class="thesis">Мало туристов</p>
+          <p class="header">Мало туристов</p>
           <p class="num">- №5 -</p>
-          <p class="description">Большинство туристов едет в Гранд Каньон и толпится там</p>
+          <p class="description">Большинство едет в гранд каньон и толпится там</p>
         </div>
       </div>
       <div class="search_hotel">
         <div class="interested">
           <h3>Заинтересовались?</h3>
-          <p class="definition">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="definition">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <div class="search_container">
           <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
           <form class="search" action="index.html" method="post">
-            <div class="input_date">
-              <label>Дата заезда:</label>
-              <input type="date" name="check_in_date">
-              <button class="calendar" type="button"></button>
+            <div class="input_date row">
+              <label class="header">Дата заезда:</label>
+              <input class="date_field" type="date" name="check_in_date">
+              <button class="btn calendar" type="button"></button>
             </div>
-            <div class="input_date">
-              <label>Дата выезда:</label>
-              <input type="date" name="check_out_date">
-              <button class="calendar" type="button"></button>
+            <div class="input_date row">
+              <label class="header">Дата выезда:</label>
+              <input class="date_field" type="date" name="check_out_date">
+              <button class="btn calendar" type="button"></button>
             </div>
-            <div class="input_num">
-              <label>Взрослые:</label>
-              <button class="btn down" type="button">-</button>
-              <input type="number">
-              <button class="btn up" type="button">+</button>
+            <div class="row">
+              <div class="input_num">
+                <label class="header">Взрослые:</label>
+                <button class="btn down" type="button">-</button>
+                <input class="number_field" type="number">
+                <button class="btn up" type="button">+</button>
+              </div>
+              <div class="input_num">
+                <label class="header">Дети:</label>
+                <button class="btn down" type="button">-</button>
+                <input class="number_field" type="number">
+                <button class="btn up" type="button">+</button>
+              </div>
             </div>
-            <div class="input_num">
-              <label>Дети:</label>
-              <button class="btn down" type="button">-</button>
-              <input type="number">
-              <button class="btn up" type="button">+</button>
-            </div>
-            <input type="submit" name="start_search" value="Найти">
+            <input class="find" type="submit" name="start_search" value="Найти">
           </form>
+        </div>
+        <div class="main_footer index_footer">
+          <div class="container">
+            <p class="thesis">#sedona</p>
+            <div class="footer-social">
+              <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
+              <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+              <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
+            </div>
+            <div class="producer">
+              <p>Website by</p>
+              <a href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <footer class="main_footer">
-      <div class="container">
-        <p class="thesis">#sedona</p>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
-        </div>
-        <div class="producer">
-          <p>Website by</p>
-          <a href="https://up.htmlacademy.ru"><img src="./img/html_academy.png" alt=""></a>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

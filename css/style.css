@@ -1,11 +1,349 @@
 body{
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", arial, sans-serif;
   text-transform: uppercase;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header{
   font-size: 14px;
   font-weight: bold;
+}
+
+.main_header{
+  height: 56px;
+}
+
+.main_header:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main_header ul{
+  list-style-type: none;
+}
+
+.main_header .left{
+  float: left;
+}
+
+.main_header .right{
+  float: right;
+}
+
+.top_logo{
+  float: left;
+}
+
+.container{
+  width: 1200px;
+}
+
+.main_logo{
+  height: 510px;
+  width: inherit;
+  float: left;
+  background: url(./../img/bg_footer_index_page.png) left bottom / 1200px 57px no-repeat,
+              url(./../img/bg_index_page.jpg) 0px 0px / 1200px;
+}
+
+.welcome{
+  margin-left: 372px;
+  margin-top: 77px;
+}
+
+.why_sedona{
+  width: inherit;
+  float: left;
+  margin-bottom: 60px;
+}
+
+.why_sedona .thesis{
+  width: 440px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+.definition{
+  text-align: center;
+  margin-top: 43px;
+  margin-bottom: 0px;
+}
+
+.advantages{
+  float: left;
+  width: inherit;
+  height: 256px;
+}
+
+.advantages .text_description{
+  float: left;
+  width: 400px;
+  height: inherit;
+  text-align: center;
+  background-color: #81b3d2;
+  color: white;
+}
+
+.advantages .header{
+  margin-top: 58px;
+  font-size: 21px;
+  font-weight: bold;;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages .num{
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.advantages .description{
+  margin-top: 30px;
+  font-size: 14px;
+  width: 307px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages .photo{
+  float: left;
+  width: 800px;
+  height: 256px;
+
+  background-size: 800px;
+  background-position: 0px -78px;
+}
+
+.advantages .first{
+  background-image: url(./../img/advantages/1.jpg);
+}
+
+.advantages .last{
+  background-image: url(./../img/advantages/1.jpg);
+}
+
+.advantages .second{
+  background-image: url(./../img/advantages/2.jpg);
+}
+
+
+.recomends {
+  float: left;
+  width: inherit;
+  height: 330px;
+}
+
+.recomends .recomend{
+  float: left;
+  width: 400px;
+  text-align: center;
+  background-position: 162px 60px;
+  background-repeat: no-repeat;
+}
+
+.recomends .recomend_thesis{
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 164px;
+}
+
+.housing {
+  background: url(./../img/recomends/house.png);
+}
+
+.food {
+  background: url(./../img/recomends/food.png);
+}
+
+.souvenirs {
+  background: url(./../img/recomends/souvenirs.png);
+}
+
+.recomends .definition{
+  font-size: 14px;
+  width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small{
+  float: left;
+  width: inherit;
+  height: 256px;
+  background-color: #e5e5e5;
+}
+
+.advantage{
+  float: left;
+  width: 400px;
+  height: inherit;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.small .header{
+  margin-top: 50px;
+}
+
+/* Поиск ---------------------------------------------------------------------*/
+.search_hotel{
+  width: inherit;
+  height: 885px;/*765px;*/
+  float: left;
+  background: url(./../img/map_index_page.jpg) 0px 291px no-repeat;
+}
+
+.interested{
+  width: inherit;
+  float: left;
+  text-align: center;
+}
+
+.interested h3{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 57px;
+}
+
+.search_container{
+  float: left;
+  width: 568px;
+  height: 480px;
+  margin-left: 317px;
+  background-color: white;
+  margin-top: 30px;
+}
+
+.search {
+  width: 458px;
+  height: 286px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.show_hide{
+  width: 568px;
+  height: 86px;
+  background-color: #766357;
+  color: white;
+  font-size: 21px;
+  text-transform: uppercase;
+  border: 0px;
+}
+
+.search .row{
+  height: 38px;
+  margin-bottom: 30px;
+  vertical-align: middle;
+}
+
+.search .header{
+  width: 112px;
+  float: left;
+  line-height: 38px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.search .date_field{
+  width: 308px;
+  height: inherit;
+  background-color: #f2f2f2;
+  border: 0px;
+  float: left;
+  padding: 0px;
+  line-height: 38px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.calendar{
+  background: url(./../img/calendar.png) center no-repeat;
+  background-color: #f2f2f2;
+  height: 38px;
+  width: 38px;
+  float: left;
+  border: 0px;
+  padding: 0px;
+}
+
+.search .number_field{
+  background-color: #f2f2f2;
+  height: 38px;
+  width: 38px;
+  border: 0px;
+  padding: 0px;
+  float: left;
+}
+
+.input_num .btn{
+  background-color: #f2f2f2;
+  height: 38px;
+  width: 38px;
+  border: 0px;
+  padding: 0px;
+  float: left;
+}
+
+.search .input_num:last-child .header{
+  width: 66px;
+  margin-left: 52px;
+}
+
+.search .find{
+  width: 458px;
+  height: 58px;
+  background-color: #81b3d2;
+  color: white;
+  border: 0px;
+  padding: 0px;
+  font-size: 21px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+/*Падвал----------------------------------------------------------------------*/
+
+.main_footer{
+  float: left;
+  width: inherit;
+  height: 120px;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.main_footer .thesis{
+  float: left;
+  width: 400px;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.main_footer .footer-social{
+  float: left;
+  width: 400px;
+}
+
+.main_footer .producer{
+  float: left;
+  width: 400px;
+  text-align: center;
+}
+
+.index_footer{
+  margin-top: 80px;
 }
 
 .thesis{
