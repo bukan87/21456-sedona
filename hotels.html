@@ -19,61 +19,80 @@
       </nav>
       <a href="index.html" class="top_logo"><img src="./img/main_menu_logo.png" alt="Логотип"></a>
     </header>
-    <main>
-      <form class="" action="index.html" method="post">
+    <main class="container">
+      <form class="filter clearfix" action="index.html" method="post">
         <fieldset class="infrastructure">
-          <legend>Инфраструктура:</legend>
-          <label>
-            <input type="checkbox" name="pool">
-            Бассейн
-          </label>
-          <label>
-            <input type="checkbox" name="parking">
-            Парковка
-          </label>
-          <label>
-            <input type="checkbox" name="wi_fi">
-            wi-fi
-          </label>
+          <legend class="header">Инфраструктура:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="pool">
+                Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="parking">
+                Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="wi_fi">
+                wi-fi
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="house_type">
-          <legend>Тип жилья:</legend>
-          <label>
-            <input type="checkbox" name="hotel">
-            Гостиница
-          </label>
-          <label>
-            <input type="checkbox" name="motel">
-            Мотель
-          </label>
-          <label>
-            <input type="checkbox" name="apartment">
-            Апартаменты
-          </label>
+          <legend class="header">Тип жилья:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="hotel">
+                Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="motel">
+                Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="apartment">
+                Апартаменты
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
         <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
         <fieldset class="price">
-          <legend>Стоимость в сутки(Р):</legend>
-          <label>
-            От:
-            <input type="number" name="costFrom" value="">
-          </label>
-          <label>
-            До:
-            <input type="number" name="costTo" value="">
-          </label>
+          <legend class="header">Стоимость в сутки(Р):</legend>
+          <input class="from" type="number" name="costFrom" value="">
+          <input class="to" type="number" name="costTo" value="">
           <input type="range" name="costRange" value="1">
         </fieldset>
-        <input type="submit" name="start_search" value="Показать">
+        <input class="show" type="submit" name="start_search" value="Показать">
       </form>
-      <div class="search_result">
+      <div class="search_result clearfix">
         <div class="header">
           <p class="thesis">Найдено: 3</p>
+          <p class="thesis_sort">Сортировка:</p>
           <div class="sort_result">
-            <a class="current_page" href="#">По цене</a>
-            <a href="#">По типу</a>
-            <a href="#">По рэйтингу</a>
+            <ul>
+              <li>
+                <a class="sort current_page" href="#">По цене</a>
+              </li>
+              <li>
+                <a class="sort" href="#">По типу</a>
+              </li>
+              <li>
+                <a class="sort" href="#">По рэйтингу</a>
+              </li>
+            </ul>
           </div>
           <div class="arrows">
             <a class="desc" href="#">По убыванию</a>
@@ -81,8 +100,8 @@
           </div>
         </div>
         <div class="result_list">
-          <article class="hotel">
-            <img src="./img/hotels/amara.jpg" alt="hotel">
+          <article class="hotel clearfix">
+            <img class="hotel_photo" width="135" height="90" src="./img/hotels/amara.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Amara resort & spa</a>
               <p class="definition">Гостиница от 4000 р.</p>
@@ -99,8 +118,8 @@
               <p>Рейтинг: 8,5</p>
             </div>
           </article>
-          <article class="hotel">
-            <img src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
+          <article class="hotel clearfix">
+            <img class="hotel_photo" width="135" height="90" src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Desert quail inn</a>
               <p class="definition">Мотель от 3000 р.</p>
@@ -116,8 +135,8 @@
               <p>Рейтинг: 8,9</p>
             </div>
           </article>
-          <article class="hotel">
-            <img src="./img/hotels/poco_diablo.jpg" alt="hotel">
+          <article class="hotel clearfix">
+            <img class="hotel_photo" width="135" height="90" src="./img/hotels/poco_diablo.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Villas at poco diablo</a>
               <p class="definition">Апартаменты от 2000 р.</p>
@@ -137,15 +156,15 @@
     </main>
     <footer class="main_footer">
       <div class="container">
-        <p class="thesis">#sedona</p>
+        <p class="thesis">#visitsedona</p>
         <div class="footer-social">
           <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
         </div>
         <div class="producer">
-          <p>Website by</p>
-          <a href="https://up.htmlacademy.ru"><img src="./img/html_academy.png" alt=""></a>
+          <p class="web">Website by</p>
+          <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
         </div>
       </div>
     </footer>

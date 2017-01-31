@@ -11,14 +11,19 @@ header{
   font-weight: bold;
 }
 
-.main_header{
-  height: 56px;
-}
-
-.main_header:after{
+.clearfix{
   content: "";
   display: table;
   clear: both;
+}
+
+.container{
+  width: 1200px;
+}
+
+/* Заголовок------------------------------------------------------------------*/
+.main_header{
+  height: 56px;
 }
 
 .main_header ul{
@@ -37,9 +42,7 @@ header{
   float: left;
 }
 
-.container{
-  width: 1200px;
-}
+/* Главная картинка-----------------------------------------------------------*/
 
 .main_logo{
   height: 510px;
@@ -66,7 +69,6 @@ header{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-
 }
 
 .definition{
@@ -312,14 +314,15 @@ header{
   margin-top: 25px;
 }
 
-/*Падвал----------------------------------------------------------------------*/
+/* Подвал---------------------------------------------------------------------*/
 
 .main_footer{
   float: left;
-  width: inherit;
+  width: 1200px;
   height: 120px;
   background-color: white;
   opacity: 0.9;
+  line-height: 120px;
 }
 
 .main_footer .thesis{
@@ -328,7 +331,7 @@ header{
   font-size: 21px;
   font-weight: bold;
   text-align: center;
-
+  line-height: 120px;
 }
 
 .main_footer .footer-social{
@@ -342,8 +345,204 @@ header{
   text-align: center;
 }
 
+.producer .web{
+  float: left;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.producer .producer_logo{
+  float: left;
+  padding-top: 30px;
+}
+
 .index_footer{
   margin-top: 80px;
+}
+
+/* Страница отелей*********************************************************/
+/*Фильтр*/
+
+.filter{
+  float: left;
+  width: inherit;
+  height: 220px;
+  background: url(./../img/bg_hotels_page.jpg) 0px -300px / 1200px no-repeat;
+  color: white;
+  font-size: 14px;
+}
+
+.filter .header{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.infrastructure{
+  float: left;
+  width: 240px;
+  height: inherit;
+  border: none;
+  margin-right: 0px;
+  margin-left: 70px;
+  padding: 0px;
+}
+
+.house_type{
+  float: left;
+  width: 285px;
+  height: inherit;
+  border: none;
+  margin-right: 0px;
+  padding: 0px;
+}
+
+.price{
+  float: left;
+  width: 400px;
+  margin-left: 200px;
+  margin-right: 0px;
+  border: none;
+  padding: 0px;
+  height: 150px;
+}
+
+.price .from,
+.price .to {
+  width: 157px;
+  height: 21px;
+  border-left: 2px solid white;
+  border-right: 0px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 3px;
+  background-color: rgba(255, 0, 0, 0);
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.price .to{
+  border-left: 0px;
+  border-right: 2px solid white;
+  background-color: rgba(255, 0, 0, 0);
+  margin-left: 0px;
+}
+
+.show{
+  float: left;
+  margin-left: 298px;
+  border: 2px solid white;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0);
+  width: 133px;
+  height: 32px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Результаты поиска----------------------------------------------------------*/
+
+.search_result{
+  width: inherit;
+}
+
+.search_result .header{
+  width: 1060px;
+  height: 87px;
+  float: left;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.search_result .header .thesis{
+  line-height: 87px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+  width: 164px;
+}
+
+.search_result .thesis_sort{
+  line-height: 87px;
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.sort_result{
+  float: left;
+}
+
+.arrows{
+  float: right;
+}
+
+.result_list{
+  float: left;
+}
+
+.result_list .hotel{
+  width: 1060px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.result_list .hotel_photo{
+  float: left;
+  margin: 30px 0px;
+}
+
+.result_list .hotel_description{
+  float: left;
+  margin: 30px 0px;
+  margin-left: 30px;
+  height: 90px;
+}
+
+.result_list .hotel_description .name{
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.result_list .hotel_description .definition{
+  font-size: 14px;
+  margin: 9px 0px;
+  text-align: left;
+}
+
+.result_list .hotel_description .detail,
+.result_list .hotel_description .book{
+  height: 27px;
+  display: block;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 27px;
+  text-align: center;
+  float: left;
+}
+
+.result_list .hotel_description .detail{
+  width: 110px;
+  background-color: #81b3d2;
+}
+
+.result_list .hotel_description .book{
+  width: 142px;
+  background-color: #766357;
+  margin-left: 6px;
+}
+
+.result_list .ratio{
+  float: right;
+  margin-right: 70px;
 }
 
 .thesis{
