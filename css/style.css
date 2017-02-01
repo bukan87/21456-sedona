@@ -11,7 +11,7 @@ header{
   font-weight: bold;
 }
 
-.clearfix{
+.clearfix:after{
   content: "";
   display: table;
   clear: both;
@@ -174,6 +174,11 @@ header{
 }
 
 /* Поиск ---------------------------------------------------------------------*/
+.search_footer{
+  width: inherit;
+  position: relative;
+}
+
 .search_hotel{
   width: inherit;
   height: 885px;
@@ -334,8 +339,10 @@ header{
 }
 
 .index_footer{
-  float: left;
-  margin-top: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Страница отелей*********************************************************/
