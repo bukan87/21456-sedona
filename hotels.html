@@ -6,13 +6,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="main_header clearfix">
-      <nav class="clearfix">
+    <header class="main_header">
+      <nav class="main_navigate">
         <ul class="left">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
         </ul>
-        <a href="index.html" class="top_logo"><img src="./img/main_menu_logo.png" alt="Логотип"></a>
+        <a class="top_logo"><img width=138 height=70 src="./img/main_menu_logo.png" alt="Логотип"></a>
         <ul class="right">
           <li><a href="#">Карта штата</a></li>
           <li class="current_page"><a href="#">Гостиницы</a></li>
@@ -20,7 +20,7 @@
       </nav>
     </header>
     <main class="container">
-      <form class="filter clearfix" action="index.html" method="post">
+      <form class="filter" action="index.html" method="post">
         <fieldset class="infrastructure">
           <legend class="header">Инфраструктура:</legend>
           <ul>
@@ -69,16 +69,18 @@
         </fieldset>
         <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
         <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
-        <fieldset class="price">
-          <legend class="header">Стоимость в сутки(Р):</legend>
-          <input class="from" type="number" name="costFrom" value="">
-          <input class="to" type="number" name="costTo" value="">
-          <input type="range" name="costRange" value="1">
-        </fieldset>
-        <input class="show" type="submit" name="start_search" value="Показать">
+        <div class="price_show">
+          <fieldset class="price">
+            <legend class="header">Стоимость в сутки(Р):</legend>
+            <input class="from" type="number" name="costFrom" value="">
+            <input class="to" type="number" name="costTo" value="">
+            <input type="range" name="costRange" value="1">
+          </fieldset>
+          <input class="btn show" type="submit" name="start_search" value="Показать">
+        </div>
       </form>
-      <div class="search_result clearfix">
-        <div class="header clearfix">
+      <div class="search_result">
+        <div class="header ">
           <p class="thesis">Найдено: 3</p>
           <p class="thesis_sort">Сортировка:</p>
           <div class="sort_result">
@@ -100,7 +102,7 @@
           </div>
         </div>
         <div class="result_list">
-          <article class="hotel clearfix">
+          <article class="hotel ">
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/amara.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Amara resort & spa</a>
@@ -118,7 +120,7 @@
               <p>Рейтинг: 8,5</p>
             </div>
           </article>
-          <article class="hotel clearfix">
+          <article class="hotel ">
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Desert quail inn</a>
@@ -135,7 +137,7 @@
               <p>Рейтинг: 8,9</p>
             </div>
           </article>
-          <article class="hotel clearfix">
+          <article class="hotel ">
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/poco_diablo.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Villas at poco diablo</a>
@@ -155,17 +157,15 @@
       </div>
     </main>
     <footer class="main_footer">
-      <div class="container clearfix">
-        <p class="thesis">#visitsedona</p>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
-        </div>
-        <div class="producer">
-          <p class="web">Website by</p>
-          <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
-        </div>
+      <p class="thesis">#visitsedona</p>
+      <div class="footer-social">
+        <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
+      </div>
+      <div class="producer">
+        <p class="web">Website by</p>
+        <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
       </div>
     </footer>
   </body>

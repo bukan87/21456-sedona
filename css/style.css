@@ -11,31 +11,27 @@ header{
   font-weight: bold;
 }
 
-.clearfix:after{
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .container{
   width: 1200px;
 }
 
+.btn {
+  text-transform: uppercase;
+  text-align: center;
+  border: 0px;
+  color: white;
+  padding: 0px;
+}
+
 /* Заголовок------------------------------------------------------------------*/
-.main_header{
-  height: 56px;
+.main_navigate{
+  display: flex;
+  justify-content: space-between;
+  max-height: 56px;
 }
 
 .main_header ul{
   list-style-type: none;
-}
-
-.main_header .left{
-  float: left;
-}
-
-.main_header .right{
-  float: right;
 }
 
 /* Главная картинка-----------------------------------------------------------*/
@@ -73,10 +69,10 @@ header{
 
 .advantages{
   width: inherit;
+  display: flex;
 }
 
 .advantages .text_description{
-  float: left;
   width: 400px;
   text-align: center;
   background-color: #81b3d2;
@@ -107,9 +103,7 @@ header{
 }
 
 .advantages .photo{
-  float: left;
   width: 800px;
-  height: 256px;
   background-size: 800px;
   background-position: 0px -78px;
 }
@@ -124,10 +118,10 @@ header{
 
 .recomends {
   width: inherit;
+  display: flex;
 }
 
 .recomends .recomend{
-  float: left;
   width: 400px;
   text-align: center;
   background-position: 162px 60px;
@@ -161,12 +155,10 @@ header{
 }
 
 .small{
-  width: inherit;
   background-color: #e5e5e5;
 }
 
-.advantage{
-  float: left;
+.small .advantage{
   width: 400px;
   height: inherit;
   text-align: center;
@@ -183,22 +175,21 @@ header{
   width: inherit;
   height: 885px;
   background: url(./../img/map_index_page.jpg) 0px 291px no-repeat;
+  padding-top: 57px;
 }
 
 .interested{
   width: inherit;
-  float: left;
   text-align: center;
 }
 
 .interested h3{
   font-size: 30px;
   font-weight: bold;
-  margin-top: 57px;
+  margin-top: 0px;
 }
 
 .search_container{
-  float: left;
   width: 568px;
   height: 480px;
   margin-left: 317px;
@@ -220,21 +211,17 @@ header{
   width: 568px;
   height: 86px;
   background-color: #766357;
-  color: white;
   font-size: 21px;
-  text-transform: uppercase;
-  border: 0px;
 }
 
 .search .row{
   height: 38px;
   margin-bottom: 30px;
-  vertical-align: middle;
+  display: flex;
 }
 
 .search .header{
   width: 112px;
-  float: left;
   line-height: 38px;
   font-weight: bold;
   font-size: 14px;
@@ -245,7 +232,6 @@ header{
   height: inherit;
   background-color: #f2f2f2;
   border: 0px;
-  float: left;
   padding: 0px;
   line-height: 38px;
   font-weight: bold;
@@ -257,7 +243,6 @@ header{
   background-color: #f2f2f2;
   height: 38px;
   width: 38px;
-  float: left;
   border: 0px;
   padding: 0px;
 }
@@ -268,16 +253,18 @@ header{
   width: 38px;
   border: 0px;
   padding: 0px;
-  float: left;
 }
 
 .input_num .btn{
   background-color: #f2f2f2;
   height: 38px;
   width: 38px;
-  border: 0px;
-  padding: 0px;
   float: left;
+  color: #a9a9a9;
+}
+
+.input_num{
+  display: flex;
 }
 
 .search .input_num:last-child .header{
@@ -289,11 +276,7 @@ header{
   width: 458px;
   height: 58px;
   background-color: #81b3d2;
-  color: white;
-  border: 0px;
-  padding: 0px;
   font-size: 21px;
-  text-transform: uppercase;
   margin-top: 25px;
 }
 
@@ -305,10 +288,10 @@ header{
   background-color: white;
   opacity: 0.9;
   line-height: 120px;
+  display: flex;
 }
 
 .main_footer .thesis{
-  float: left;
   width: 400px;
   font-size: 21px;
   font-weight: bold;
@@ -317,18 +300,19 @@ header{
 }
 
 .main_footer .footer-social{
-  float: left;
   width: 400px;
 }
 
 .main_footer .producer{
-  float: left;
   width: 400px;
   text-align: center;
 }
 
+.producer{
+  display: flex;
+}
+
 .producer .web{
-  float: left;
   margin-left: 100px;
   margin-right: 10px;
 }
@@ -349,11 +333,13 @@ header{
 /*Фильтр*/
 
 .filter{
-  width: inherit;
-  height: 220px;
+  width: 1060px;
+  height: 170px;
   background: url(./../img/bg_hotels_page.jpg) 0px -300px / 1200px no-repeat;
   color: white;
   font-size: 14px;
+  padding: 30px 70px;
+  display: flex;
 }
 
 .filter .header{
@@ -362,32 +348,30 @@ header{
 }
 
 .infrastructure{
-  float: left;
-  width: 240px;
+  width: 241px;
   height: inherit;
   border: none;
   margin-right: 0px;
-  margin-left: 70px;
   padding: 0px;
 }
 
 .house_type{
-  float: left;
-  width: 285px;
+  width: 288px;
   height: inherit;
   border: none;
   margin-right: 0px;
   padding: 0px;
 }
 
-.price{
-  float: left;
+.price_show{
   width: 400px;
-  margin-left: 200px;
-  margin-right: 0px;
+  margin-left: 115px;
+}
+
+.price {
   border: none;
   padding: 0px;
-  height: 150px;
+  height: 115px;
 }
 
 .price .from,
@@ -413,15 +397,13 @@ header{
 }
 
 .show{
-  float: left;
-  margin-left: 298px;
   border: 2px solid white;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0);
   width: 133px;
   height: 32px;
   color: white;
-  text-transform: uppercase;
+  margin-left: 100px;
 }
 
 /* Результаты поиска----------------------------------------------------------*/
@@ -434,30 +416,25 @@ header{
   padding-left: 70px;
   padding-right: 70px;
   border-bottom: 1px solid rgb(229, 229, 229);
+  display: flex;
 }
 
 .search_result .header .thesis{
   line-height: 87px;
   margin-top: 0px;
   margin-bottom: 0px;
-  float: left;
   width: 164px;
 }
 
 .search_result .thesis_sort{
   line-height: 87px;
-  float: left;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 12px;
 }
 
-.sort_result{
-  float: left;
-}
-
 .arrows{
-  float: right;
+
 }
 
 .result_list .hotel{
@@ -465,15 +442,15 @@ header{
   padding-left: 70px;
   padding-right: 70px;
   border-bottom: 1px solid rgb(229, 229, 229);
+  display: flex;
 }
 
 .result_list .hotel_photo{
-  float: left;
+
   margin: 30px 0px;
 }
 
 .result_list .hotel_description{
-  float: left;
   margin: 30px 0px;
   margin-left: 30px;
   height: 90px;
