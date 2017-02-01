@@ -38,16 +38,11 @@ header{
   float: right;
 }
 
-.top_logo{
-  float: left;
-}
-
 /* Главная картинка-----------------------------------------------------------*/
 
 .main_logo{
   height: 510px;
   width: inherit;
-  float: left;
   background: url(./../img/bg_footer_index_page.png) left bottom / 1200px 57px no-repeat,
               url(./../img/bg_index_page.jpg) 0px 0px / 1200px;
 }
@@ -65,7 +60,6 @@ header{
 
 .why_sedona .thesis{
   width: 440px;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -78,24 +72,21 @@ header{
 }
 
 .advantages{
-  float: left;
   width: inherit;
-  height: 256px;
 }
 
 .advantages .text_description{
   float: left;
   width: 400px;
-  height: inherit;
   text-align: center;
   background-color: #81b3d2;
   color: white;
 }
 
 .advantages .header{
-  margin-top: 58px;
+  margin-top: 44px;
   font-size: 21px;
-  font-weight: bold;;
+  font-weight: bold;
   width: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -112,13 +103,13 @@ header{
   width: 307px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 44px;
 }
 
 .advantages .photo{
   float: left;
   width: 800px;
   height: 256px;
-
   background-size: 800px;
   background-position: 0px -78px;
 }
@@ -127,19 +118,12 @@ header{
   background-image: url(./../img/advantages/1.jpg);
 }
 
-.advantages .last{
-  background-image: url(./../img/advantages/1.jpg);
-}
-
 .advantages .second{
   background-image: url(./../img/advantages/2.jpg);
 }
 
-
 .recomends {
-  float: left;
   width: inherit;
-  height: 330px;
 }
 
 .recomends .recomend{
@@ -173,12 +157,11 @@ header{
   width: 288px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 80px;
 }
 
 .small{
-  float: left;
   width: inherit;
-  height: 256px;
   background-color: #e5e5e5;
 }
 
@@ -190,15 +173,10 @@ header{
   background-color: #e5e5e5;
 }
 
-.small .header{
-  margin-top: 50px;
-}
-
 /* Поиск ---------------------------------------------------------------------*/
 .search_hotel{
   width: inherit;
-  height: 885px;/*765px;*/
-  float: left;
+  height: 885px;
   background: url(./../img/map_index_page.jpg) 0px 291px no-repeat;
 }
 
@@ -317,7 +295,6 @@ header{
 /* Подвал---------------------------------------------------------------------*/
 
 .main_footer{
-  float: left;
   width: 1200px;
   height: 120px;
   background-color: white;
@@ -357,6 +334,7 @@ header{
 }
 
 .index_footer{
+  float: left;
   margin-top: 80px;
 }
 
@@ -364,7 +342,6 @@ header{
 /*Фильтр*/
 
 .filter{
-  float: left;
   width: inherit;
   height: 220px;
   background: url(./../img/bg_hotels_page.jpg) 0px -300px / 1200px no-repeat;
@@ -447,9 +424,7 @@ header{
 }
 
 .search_result .header{
-  width: 1060px;
   height: 87px;
-  float: left;
   padding-left: 70px;
   padding-right: 70px;
   border-bottom: 1px solid rgb(229, 229, 229);
@@ -477,10 +452,6 @@ header{
 
 .arrows{
   float: right;
-}
-
-.result_list{
-  float: left;
 }
 
 .result_list .hotel{
