@@ -420,21 +420,21 @@ header{
 }
 
 .search_result .header .thesis{
-  line-height: 87px;
+  align-self: center;
   margin-top: 0px;
   margin-bottom: 0px;
   width: 164px;
 }
 
 .search_result .thesis_sort{
-  line-height: 87px;
+  align-self: center;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 12px;
 }
 
 .arrows{
-
+  align-self: center;
 }
 
 .result_list .hotel{
