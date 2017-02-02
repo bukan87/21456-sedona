@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="main_header clearfix">
+    <header class="main_header container clearfix">
       <nav class="clearfix">
         <ul class="left">
           <li><a href="#">Информация</a></li>
@@ -74,56 +74,51 @@
           <p class="description">Большинство едет в гранд каньон и толпится там</p>
         </div>
       </div>
-      <div class="search_footer">
-        <div class="search_hotel clearfix">
-          <div class="interested">
-            <h3>Заинтересовались?</h3>
-            <p class="definition">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="interested">
+        <h3>Заинтересовались?</h3>
+        <p class="definition">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </div>
+      <div class="index_map"></div>
+      <div class="search_container">
+        <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
+        <form class="search" action="index.html" method="post">
+          <div class="input_date row">
+            <label class="header">Дата заезда:</label>
+            <input class="date_field" type="date" name="check_in_date">
+            <button class="btn calendar" type="button"></button>
           </div>
-          <div class="search_container">
-            <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
-            <form class="search" action="index.html" method="post">
-              <div class="input_date row">
-                <label class="header">Дата заезда:</label>
-                <input class="date_field" type="date" name="check_in_date">
-                <button class="btn calendar" type="button"></button>
-              </div>
-              <div class="input_date row">
-                <label class="header">Дата выезда:</label>
-                <input class="date_field" type="date" name="check_out_date">
-                <button class="btn calendar" type="button"></button>
-              </div>
-              <div class="row">
-                <div class="input_num">
-                  <label class="header">Взрослые:</label>
-                  <button class="btn down" type="button">-</button>
-                  <input class="number_field" type="number">
-                  <button class="btn up" type="button">+</button>
-                </div>
-                <div class="input_num">
-                  <label class="header">Дети:</label>
-                  <button class="btn down" type="button">-</button>
-                  <input class="number_field" type="number">
-                  <button class="btn up" type="button">+</button>
-                </div>
-              </div>
-              <input class="find" type="submit" name="start_search" value="Найти">
-            </form>
+          <div class="input_date row">
+            <label class="header">Дата выезда:</label>
+            <input class="date_field" type="date" name="check_out_date">
+            <button class="btn calendar" type="button"></button>
           </div>
+          <div class="row">
+            <div class="input_num">
+              <label class="header">Взрослые:</label>
+              <button class="btn down" type="button">-</button>
+              <input class="number_field" type="number">
+              <button class="btn up" type="button">+</button>
+            </div>
+            <div class="input_num">
+              <label class="header">Дети:</label>
+              <button class="btn down" type="button">-</button>
+              <input class="number_field" type="number">
+              <button class="btn up" type="button">+</button>
+            </div>
+          </div>
+          <input class="find" type="submit" name="start_search" value="Найти">
+        </form>
+      </div>
+      <div class="main_footer clearfix index_footer">
+        <p class="thesis">#visitsedona</p>
+        <div class="footer-social">
+          <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
         </div>
-        <div class="main_footer index_footer">
-          <div class="container clearfix">
-            <p class="thesis">#visitsedona</p>
-            <div class="footer-social">
-              <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
-              <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-              <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
-            </div>
-            <div class="producer">
-              <p class="web">Website by</p>
-              <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
-            </div>
-          </div>
+        <div class="producer">
+          <p class="web">Website by</p>
+          <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
         </div>
       </div>
     </main>
