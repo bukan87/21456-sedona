@@ -185,7 +185,7 @@ header{
 
 .search_container{
   width: 568px;
-  margin-left: 317px;
+  margin: 0 auto;
   margin-top: 53px;
   position: relative;
 }
