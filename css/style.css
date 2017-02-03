@@ -171,6 +171,7 @@ header{
   margin-left: auto;
   margin-right: auto;
   margin-top: 57px;
+  position: relative;
 }
 
 .interested h3{
@@ -185,24 +186,20 @@ header{
 }
 
 .search_container{
-  float: left;
   width: 568px;
   height: 480px;
   margin-left: 317px;
   background-color: white;
-  margin-top: 30px;
   position: absolute;
-  bottom: 201px;
+  top: 172px;
 }
 
 .search {
-  width: 458px;
-  height: 286px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 55px;
   font-size: 14px;
   font-weight: bold;
+  padding: 55px;
 }
 
 .show_hide{
@@ -227,6 +224,7 @@ header{
   line-height: 38px;
   font-weight: bold;
   font-size: 14px;
+  text-align: left;
 }
 
 .search .date_field{
@@ -260,6 +258,11 @@ header{
   float: left;
 }
 
+.search .input_num{
+  float: left;
+  width: 229px;
+}
+
 .input_num .btn{
   background-color: #f2f2f2;
   height: 38px;
@@ -269,9 +272,9 @@ header{
   float: left;
 }
 
-.search .input_num:last-child .header{
+.input_num:last-child .header{
   width: 66px;
-  margin-left: 52px;
+  margin-left: 49px;
 }
 
 .search .find{
@@ -449,7 +452,6 @@ header{
 }
 
 .result_list .hotel{
-  width: 1060px;
   padding-left: 70px;
   padding-right: 70px;
   border-bottom: 1px solid rgb(229, 229, 229);

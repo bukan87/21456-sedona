@@ -77,39 +77,39 @@
       <div class="interested">
         <h3>Заинтересовались?</h3>
         <p class="definition">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="search_container">
+          <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
+          <form class="search" action="index.html" method="post">
+            <div class="input_date row clearfix">
+              <label class="header">Дата заезда:</label>
+              <input class="date_field" type="date" name="check_in_date">
+              <button class="btn calendar" type="button"></button>
+            </div>
+            <div class="input_date row clearfix">
+              <label class="header">Дата выезда:</label>
+              <input class="date_field" type="date" name="check_out_date">
+              <button class="btn calendar" type="button"></button>
+            </div>
+            <div class="row clearfix">
+              <div class="input_num clearfix">
+                <label class="header">Взрослые:</label>
+                <button class="btn down" type="button">-</button>
+                <input class="number_field" type="number">
+                <button class="btn up" type="button">+</button>
+              </div>
+              <div class="input_num clearfix">
+                <label class="header">Дети:</label>
+                <button class="btn down" type="button">-</button>
+                <input class="number_field" type="number">
+                <button class="btn up" type="button">+</button>
+              </div>
+            </div>
+            <input class="find" type="submit" name="start_search" value="Найти">
+          </form>
+        </div>
       </div>
       <div class="index_map"></div>
-      <div class="search_container">
-        <button class="btn show_hide" type="button" name="button">Поиск гостиниц в Седоне</button>
-        <form class="search" action="index.html" method="post">
-          <div class="input_date row">
-            <label class="header">Дата заезда:</label>
-            <input class="date_field" type="date" name="check_in_date">
-            <button class="btn calendar" type="button"></button>
-          </div>
-          <div class="input_date row">
-            <label class="header">Дата выезда:</label>
-            <input class="date_field" type="date" name="check_out_date">
-            <button class="btn calendar" type="button"></button>
-          </div>
-          <div class="row">
-            <div class="input_num">
-              <label class="header">Взрослые:</label>
-              <button class="btn down" type="button">-</button>
-              <input class="number_field" type="number">
-              <button class="btn up" type="button">+</button>
-            </div>
-            <div class="input_num">
-              <label class="header">Дети:</label>
-              <button class="btn down" type="button">-</button>
-              <input class="number_field" type="number">
-              <button class="btn up" type="button">+</button>
-            </div>
-          </div>
-          <input class="find" type="submit" name="start_search" value="Найти">
-        </form>
-      </div>
-      <div class="main_footer clearfix index_footer">
+      <footer class="main_footer clearfix index_footer">
         <p class="thesis">#visitsedona</p>
         <div class="footer-social">
           <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
@@ -120,7 +120,7 @@
           <p class="web">Website by</p>
           <a class="producer_logo" href="https://up.htmlacademy.ru"><img width="113" height="39" src="./img/html_academy.png" alt=""></a>
         </div>
-      </div>
+      </footer>
     </main>
   </body>
 </html>
