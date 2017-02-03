@@ -198,10 +198,11 @@ header{
   padding: 55px;
   position: absolute;
   background-color: white;
+  box-sizing: border-box;
 }
 
 .show_hide{
-  width: 568px;
+  width: 100%;
   height: 86px;
   background-color: #766357;
   color: white;
@@ -276,7 +277,7 @@ header{
 }
 
 .search .find{
-  width: 458px;
+  width: 100%;
   height: 58px;
   background-color: #81b3d2;
   color: white;
