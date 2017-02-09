@@ -2,6 +2,7 @@ body{
   font-family: "PT Sans", arial, sans-serif;
   text-transform: uppercase;
   margin: 0 auto;
+  background-color: #f2f2f2;
 }
 
 .clearfix:after{
@@ -11,58 +12,66 @@ body{
 }
 
 .container{
-  width: 1200px;
+  min-width: 768px;
+  max-width: 1200px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
+}
+
+.shadow{
+  min-width: 768px;
+  max-width: 1200px;
+  box-shadow: 0 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
 }
 
 /* Заголовок------------------------------------------------------------------*/
 .main_navigation{
-  padding: 0 70px;
+  padding: 0 6%;
 }
 
 .main_header ul{
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.main_header li{
-  display: inline-block;
-  vertical-align: top;
-  font-size: 0;
+  width: 40%;
 }
 
 .main_header .left{
   float: left;
-  width: 461px;
   text-align: left;
 }
 
 .top_logo{
   position: absolute;
-  left: auto;
-  right: auto;
+  left: 0;
+  right: 0;
   margin: auto;
   z-index: 5;
+  width: 138px;
 }
 
 .main_header .right{
   float: right;
-  width: 461px;
   text-align: right;
 }
 
+.main_header li{
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 18px 0;
+}
+
 .main_header .point{
-  display: block;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   color: black;
-  padding: 19px 0;
-  vertical-align: middle;
-  width: 220px;
 }
 
 .main_header .point:hover{
@@ -80,14 +89,17 @@ body{
 
 .main_logo{
   height: 509px;
-  width: inherit;
-  background: url(./../img/bg_footer_index_page.png) left bottom / 1200px 57px no-repeat,
-              url(./../img/bg_index_page.jpg) 0px -83px / 1200px;
+  background: url(./../img/bg_footer_index_page.png) left bottom / 100% 57px no-repeat,
+              url(./../img/bg_index_page.jpg) 0px /*-83px*/6.91% / 100%;
 }
 
 .welcome{
-  margin-left: 371px;
-  margin-top: 72px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 458px;
+  height: 352px;
+  padding-top: 75px;
 }
 
 .why_sedona{
@@ -110,7 +122,7 @@ body{
 
 .advantages .text_description{
   float: left;
-  width: 400px;
+  width: 33%;
   text-align: center;
   background-color: #81b3d2;
   color: white;
@@ -120,7 +132,7 @@ body{
   margin-top: 55px;
   font-size: 21px;
   font-weight: bold;
-  width: 150px;
+  width: 160px;
   margin-left: auto;
   margin-right: auto;
   line-height: 20px;
@@ -133,33 +145,34 @@ body{
 
 .advantages .description{
   margin-top: 25px;
-  font-size: 14px;
-  width: 307px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 52px;
   line-height: 20px;
+  font-size: 14px;
+  min-width: 181px;
+  max-width: 307px;
 }
 
-.advantages .photo{
-  float: left;
-  width: 800px;
-  height: 256px;
-  background-size: 800px;
-  background-position: 0px -78px;
+.advantages.first,
+.advantages.second{
+  background: url(./../img/advantages/1.jpg) no-repeat;
+  background-size: 67%;
+  background-position: right;
 }
 
-.advantages .first{
-  background-image: url(./../img/advantages/1.jpg);
-}
-
-.advantages .second{
+.advantages.second {
   background-image: url(./../img/advantages/2.jpg);
+  background-position: left;
+}
+
+.advantages.second .text_description{
+  float: right;
 }
 
 .recomends .recomend{
   float: left;
-  width: 400px;
+  width: 33.33%;
   text-align: center;
   background-position: center 60px;
   background-repeat: no-repeat;
@@ -171,21 +184,45 @@ body{
   margin-top: 158px;
 }
 
-.housing {
-  background: url(./../img/recomends/house.png);
+.recomend{
+  position: relative;
 }
 
-.food {
-  background: url(./../img/recomends/food.png);
+.recomend::after{
+  position: absolute;
+  display: block;
+  content: "";
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 60px;
+  background: url(./../img/sprite.png) no-repeat;
 }
 
-.recomend.souvenirs {
-  background: url(./../img/recomends/souvenirs.png) center 56px no-repeat;;
+.housing::after {
+  width: 75px;
+  height: 72px;
+  background-position: -10px -346px;
+}
+
+.food::after {
+  width: 74px;
+  height: 70px;
+  background-position: -10px -256px;
+}
+
+.recomend.souvenirs::after {
+  top: 57px;
+  width: 64px;
+  height: 76px;
+  background-position: -10px -762px;
 }
 
 .recomends .definition{
   font-size: 14px;
-  width: 288px;
+  padding: 0 11.25%;
+  /*min-width: 154px;
+  max-width: 288px;*/
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
@@ -197,15 +234,23 @@ body{
   background-color: #e5e5e5;
 }
 
+.advantages.small .header{
+  margin-top: 50px;
+}
+
+.advantages.small .description{
+  padding: 0 11%;
+  margin-bottom: 58px;
+}
+
 .advantage{
   float: left;
-  width: 400px;
+  width: 33.33%;
   text-align: center;
   background-color: #e5e5e5;
 }
 
 /* Поиск ---------------------------------------------------------------------*/
-
 .interested{
   text-align: center;
   margin-left: auto;
@@ -220,7 +265,7 @@ body{
 
 .index_map{
   height: 595px;
-  background: url(./../img/map_index_page.jpg) 0px 0px no-repeat;
+  background: url(./../img/map_index_page.jpg) no-repeat;
 }
 
 .search_container{
@@ -253,6 +298,8 @@ body{
 .brown{
   background-color: #766357;
   color: white;
+  cursor: pointer;
+  outline: 0;
 }
 
 .brown:hover{
@@ -289,6 +336,8 @@ body{
   line-height: 38px;
   font-weight: bold;
   font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 15px;
 }
 
 .search .date_field:hover{
@@ -306,6 +355,8 @@ body{
   float: left;
   border: 0px;
   padding: 0px;
+  cursor: pointer;
+  outline: 0;
 }
 
 .calendar:after{
@@ -336,6 +387,7 @@ body{
   border: 0px;
   padding: 0px;
   float: left;
+  text-align: center;
 }
 
 .search .input_num{
@@ -345,7 +397,7 @@ body{
 
 .input_num .btn{
   font-weight: bold;
-  font-size: 14px;
+  font-size: 26px;
   color: #a9a9a9;
 }
 
@@ -365,6 +417,8 @@ body{
   border: 0px;
   padding: 0px;
   float: left;
+  cursor: pointer;
+  outline: 0;
 }
 
 .input_num:last-child .header{
@@ -385,6 +439,8 @@ body{
 .blue{
   background-color: #81b3d2;
   color: white;
+  cursor: pointer;
+  outline: 0;
 }
 
 .blue:hover{
@@ -406,7 +462,7 @@ body{
 
 .main_footer .thesis{
   float: left;
-  width: 400px;
+  width: 33.33%;
   font-size: 21px;
   font-weight: bold;
   text-align: center;
@@ -416,7 +472,7 @@ body{
 
 .main_footer .footer-social{
   float: left;
-  width: 400px;
+  width: 33.33%;
   text-align: center;
   font-size: 0;
 }
@@ -456,13 +512,13 @@ body{
 .social-btn-tweeter::after{
   width: 17px;
   height: 15px;
-  background-position: -10px -617px;
+  background-position: -10px -895px;
 }
 
-.social-btn:active::after{
+.social-btn-tweeter:active::after{
   width: 17px;
   height: 15px;
-  background-position: -10px -652px;
+  background-position: -10px -930px;
 }
 
 .social-btn-fb::after{
@@ -480,24 +536,25 @@ body{
 .social-btn-youtube::after{
   width: 20px;
   height: 16px;
-  background-position: -10px -687px;
+  background-position: -10px -965px;
 }
 
 .social-btn-youtube:active::after{
   width: 20px;
   height: 16px;
-  background-position: -10px -723px;
+  background-position: -10px -1001px;
 }
 
 .main_footer .producer{
   float: left;
-  width: 400px;
+  width: 33.33%;
+  text-align: center;
   text-align: center;
 }
 
 .producer .web{
   float: left;
-  margin-left: 103px;
+  margin-left: 23%;
   margin-right: 10px;
   font-size: 14px;
 }
@@ -507,11 +564,11 @@ body{
   display: block;
   width: 113px;
   height: 39px;
-  background: url(./../img/sprite.png) -10px -256px no-repeat;
+  background: url(./../img/sprite.png) -10px -438px no-repeat;
 }
 
 .producer .producer_logo:hover{
-  background-position: -10px -315px;
+  background-position: -10px -497px;
 }
 
 .producer .producer_logo:active{
@@ -527,21 +584,34 @@ body{
 
 /* Страница отелей*********************************************************/
 /*Фильтр*/
-
 .filter{
   width: inherit;
-  height: 220px;
-  background: url(./../img/bg_hotels_page.jpg) 0px -300px / 1200px no-repeat;
+  height: 217px;
+  background: url(./../img/bg_hotels_page.jpg) 0px -300px / 100% no-repeat;
   color: white;
   font-size: 14px;
 }
 
+.filter .left{
+  margin-left: 6%;
+  float: left;
+}
+
+.filter .right{
+  margin-right: 6%;
+  float: right;
+  width: 26.5%
+}
+
 .filter .header{
-  font-size: 16px;
   font-weight: bold;
   margin: 0;
   padding: 0;
   /*margin-bottom: 12px;*/
+  margin-bottom: 9px;
+
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .filter ul{
@@ -553,15 +623,19 @@ body{
   display: none;
 }
 
-.filter label{
+.filter label[for^="flt"]{
   padding-left: 40px;
   position: relative;
   cursor: pointer;
   display: block;
-  margin-top: 28px;
+  margin-top: 26px;
 }
 
-.filter label::before{
+.filter li:first-of-type label{
+  margin-top: 18px;
+}
+
+.filter label[for^="flt"]::before{
   content: "";
   display: block;
   position: absolute;
@@ -572,7 +646,7 @@ body{
   background: url(./../img/sprite.png) -10px -94px no-repeat;
 }
 
-.flt:checked+label::before{
+.flt:checked+label[for^="flt"]::before{
   width: 26px;
   height: 22px;
   background-position: -10px -136px;
@@ -583,7 +657,7 @@ body{
   width: 253px;
   border: none;
   margin-right: 0px;
-  margin-left: 70px;
+  /*margin-left: 6%;*/
   margin-top: 27px;
   padding: 0px;
 }
@@ -595,56 +669,131 @@ body{
 
 .house_type{
   float: left;
-  width: 285px;
   border: none;
   margin-right: 0px;
   padding: 0px;
 }
 
 .price{
-  float: left;
-  width: 400px;
-  margin-left: 190px;
-  margin-right: 0px;
+  position: relative;
+  margin: 0;
   border: none;
   padding: 0px;
-}
-
-.price .from,
-.price .to {
-  width: 157px;
-  height: 32px;
-  border-left: 2px solid white;
-  border-right: 0px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  border-radius: 3px;
-  background-color: rgba(255, 0, 0, 0);
-  float: left;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.price .to{
-  border-left: 0px;
-  border-right: 2px solid white;
-  background-color: rgba(255, 0, 0, 0);
-  margin-left: 0px;
+  font-size: 0;
+  width: 100%;
+  min-width: 220px;
+  box-sizing: border-box;
 }
 
 .from_to{
-  width: 313px;
-  margin-top: 10px;
-  margin-left: 14px;
+  position: relative;
+
+  height: 34px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.from_to::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.from_to label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 34px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.from_to .from,
+.from_to .to {
+  width: 50%;
+  padding-left: 10%;
+  box-sizing: border-box;
+}
+
+.price input {
+  width: 50px;
+  margin: 0;
+  margin-left: 3px;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: 0;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
 }
 
 .show{
-  float: left;
-  margin-top: 19px;
-  margin-left: 285px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+
   border: 2px solid white;
-  border-radius: 3px;
+  border-radius: 2px;
   background: rgba(255, 255, 255, 0);
+  box-sizing: border-box;
   width: 137px;
   height: 35px;
   color: white;
@@ -658,7 +807,7 @@ body{
 /* Результаты поиска----------------------------------------------------------*/
 
 .search_result{
-  width: inherit;
+  width: 100%;
 }
 
 .search_result .header{
@@ -700,9 +849,10 @@ body{
 }
 
 .sort_result .sort{
-  color: black;
-  opacity: 0.3;
   margin-left: 35px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
 }
 
 .sort_result .sort:hover{
@@ -710,15 +860,14 @@ body{
   opacity: 1;
 }
 
-.sort_result .sort:active{
+.sort_result .sort:active:not(.current_page){
   color: black;
-  opacity: 1;
+  border-bottom: 0;
 }
 
 .sort_result .current_page{
   color: #81b3d2;
-  opacity: 1;
-  text-decoration: none;
+  border-bottom: 0;
 }
 
 .arrows{
@@ -729,9 +878,15 @@ body{
   display: inline-block;
   vertical-align: bottom;
   font-size: 0;
-  width: 11px;
+  /*width: 11px;
   height: 10px;
   background: url(./../img/sprite.png) -10px -460px no-repeat;
+  opacity: 0.3;*/
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5.5px 0 5.5px;
+  border-color: black transparent transparent transparent;
   opacity: 0.3;
 }
 
@@ -740,19 +895,26 @@ body{
 }
 
 .arrows .desc{
-  background-position: -10px -520px;
-  padding-right: 10px;
+  margin-right: 12px;
+  border-style: solid;
+  border-width: 0 5.5px 11px 5.5px;
+  border-color: transparent transparent black transparent;
+  opacity: 0.3;
 }
 
 .arrows .desc:active,
 .desc.disabled{
-  background-position: -10px -550px;
+  border-style: solid;
+  border-width: 0 5.5px 11px 5.5px;
+  border-color: transparent transparent #81b3d2 transparent;
   opacity: 1;
 }
 
 .arrows .ask:active,
 .ask.disabled{
-  background-position: -10px -490px;
+  border-style: solid;
+  border-width: 11px 5.5px 0 5.5px;
+  border-color: #81b3d2 transparent transparent transparent;
   opacity: 1;
 }
 /* Отели----------------------*/
@@ -763,6 +925,7 @@ body{
 
 .result_list .hotel_photo{
   float: left;
+  margin-left: 2px;
 }
 
 .result_list .hotel_description{
@@ -776,12 +939,30 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: black;
+  line-height: 0;
 }
 
-.hotel_description .definition{
+.hotel_description .name:hover{
+  color: #81b3d2;
+}
+
+.hotel_description .name:active{
+  color: #cacaca;
+}
+
+.hotel_definition{
   font-size: 14px;
-  margin: 9px 0px;
   text-align: left;
+  margin-bottom: 7px;
+}
+
+.hotel_definition p{
+  float: left;
+  margin: 9px 0px;
+}
+
+.hotel_definition .type{
+  width: 116px;
 }
 
 .hotel_description .detail,
@@ -823,7 +1004,9 @@ body{
   vertical-align: top;
   width: 17px;
   height: 17px;
-  background: url(./../img/sprite.png) -10px -580px no-repeat;
+  width: 17px;
+  height: 17px;
+  background: url(./../img/sprite.png) -10px -858px no-repeat;
   padding-left: 5px;
 }
 

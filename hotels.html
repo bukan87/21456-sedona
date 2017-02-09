@@ -14,7 +14,7 @@
           <li><a class="point" href="#">Информация</a></li>
           <li><a class="point" href="#">Фото и видео</a></li>
         </ul>
-        <a href="index.html" class="top_logo"><img src="./img/main_menu_logo.png" alt="Логотип"></a>
+        <a href="index.html" class="top_logo"><img width=138 height=70 src="./img/main_menu_logo.png" alt="Логотип"></a>
         <ul class="menu right">
           <li><a class="point" href="#">Карта штата</a></li>
           <li><a class="point current_page" href="#">Гостиницы</a></li>
@@ -23,49 +23,61 @@
     </header>
     <main class="container">
       <form class="filter clearfix" action="index.html" method="post">
-        <fieldset class="infrastructure">
-          <legend class="header">Инфраструктура:</legend>
-          <ul>
-            <li>
-              <input class="flt" type="checkbox" name="pool" id="flt_1">
-              <label for="flt_1">Бассейн</label>
-            </li>
-            <li>
-              <input class="flt" type="checkbox" name="parking" id="flt_2">
-              <label for="flt_2">Парковка</label>
-            </li>
-            <li>
-              <input class="flt" type="checkbox" name="wi_fi" id="flt_3">
-              <label for="flt_3">wi-fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="house_type">
-          <legend class="header">Тип жилья:</legend>
-          <ul>
-            <li>
-              <input class="flt" type="checkbox" name="hotel" id="flt_4">
-              <label for="flt_4">Гостиница</label>
-            </li>
-            <li>
-              <input class="flt" type="checkbox" name="motel" id="flt_5">
-              <label for="flt_5">Мотель</label>
-            </li>
-            <li>
-              <input class="flt" type="checkbox" name="apartment" id="flt_6">
-              <label for="flt_6">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="left clearfix">
+          <fieldset class="infrastructure">
+            <legend class="header">Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input class="flt" type="checkbox" name="pool" id="flt_1">
+                <label for="flt_1">Бассейн</label>
+              </li>
+              <li>
+                <input class="flt" type="checkbox" name="parking" id="flt_2">
+                <label for="flt_2">Парковка</label>
+              </li>
+              <li>
+                <input class="flt" type="checkbox" name="wi_fi" id="flt_3">
+                <label for="flt_3">wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="house_type">
+            <legend class="header">Тип жилья:</legend>
+            <ul>
+              <li>
+                <input class="flt" type="checkbox" name="hotel" id="flt_4">
+                <label for="flt_4">Гостиница</label>
+              </li>
+              <li>
+                <input class="flt" type="checkbox" name="motel" id="flt_5">
+                <label for="flt_5">Мотель</label>
+              </li>
+              <li>
+                <input class="flt" type="checkbox" name="apartment" id="flt_6">
+                <label for="flt_6">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
         <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
-        <fieldset class="price">
-          <legend class="header">Стоимость в сутки(Р):</legend>
-          <input class="from" type="number" name="costFrom" value="">
-          <input class="to" type="number" name="costTo" value="">
-          <input class="from_to" type="range" name="costRange" value="1">
-        </fieldset>
-        <input class="show" type="submit" name="start_search" value="Показать">
+        <div class="right clearfix">
+          <fieldset class="price">
+            <legend class="header">Стоимость в сутки(Р):</legend>
+            <div class="from_to">
+              <label class="from">От<input type="text" name="costFrom" value="0"></label>
+              <label class="to">До<input type="text" name="costTo" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>-
+          </fieldset>
+          <input class="show" type="submit" name="start_search" value="Показать">
+        </div>
       </form>
       <div class="search_result clearfix">
         <div class="header clearfix">
@@ -85,8 +97,8 @@
             </ul>
           </div>
           <div class="arrows">
-            <a class="desc disabled" href="#">По убыванию</a>
-            <a class="ask" href="#">По возрастанию</a>
+            <a class="desc" href="#">По убыванию</a>
+            <a class="ask disabled" href="#">По возрастанию</a>
           </div>
         </div>
         <div class="result_list">
@@ -94,7 +106,10 @@
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/amara.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Amara resort & spa</a>
-              <p class="definition">Гостиница от 4000 р.</p>
+              <div class="hotel_definition clearfix">
+                <p class="type">Гостиница</p>
+                <p>от 4000 р.</p>
+              </div>
               <div class="detail_book clearfix">
                 <a class="detail blue" href="#">Подробнее</a>
                 <a class="book brown" href="#">Забронировать</a>
@@ -114,7 +129,10 @@
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Desert quail inn</a>
-              <p class="definition">Мотель от 3000 р.</p>
+              <div class="hotel_definition clearfix">
+                <p class="type">Мотель</p>
+                <p>от 3000 р.</p>
+              </div>
               <div class="detail_book clearfix">
                 <a class="detail blue" href="#">Подробнее</a>
                 <a class="book brown" href="#">Забронировать</a>
@@ -133,7 +151,10 @@
             <img class="hotel_photo" width="135" height="90" src="./img/hotels/poco_diablo.jpg" alt="hotel">
             <div class="hotel_description">
               <a class="name" href="#">Villas at poco diablo</a>
-              <p class="definition">Апартаменты от 2000 р.</p>
+              <div class="hotel_definition clearfix">
+                <p class="type">Апартаменты</p>
+                <p>от 2000 р.</p>
+              </div>
               <div class="detail_book clearfix">
                 <a class="detail blue" href="#">Подробнее</a>
                 <a class="book brown" href="#">Забронировать</a>
