@@ -826,7 +826,7 @@ body{
 }
 
 .search_result .header{
-  padding: 30px 70px;
+  padding: 30px 6%;
   border-bottom: 1px solid rgb(229, 229, 229);
 }
 
@@ -934,13 +934,12 @@ body{
 }
 /* Отели----------------------*/
 .result_list .hotel{
-  padding: 30px 70px;
+  padding: 30px 6%;
   border-bottom: 1px solid rgb(229, 229, 229);
 }
 
 .result_list .hotel_photo{
   float: left;
-  margin-left: 2px;
 }
 
 .result_list .hotel_description{
@@ -1022,7 +1021,7 @@ body{
   width: 17px;
   height: 17px;
   background: url(./../img/sprite.png) -10px -858px no-repeat;
-  padding-left: 5px;
+  margin-left: 7px;
 }
 
 .ratio .num_ratio{
