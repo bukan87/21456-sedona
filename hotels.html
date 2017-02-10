@@ -8,182 +8,184 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="main_header clearfix container">
-      <nav class="main_navigation clearfix">
-        <ul class="menu left">
-          <li><a class="point" href="#">Информация</a></li>
-          <li><a class="point" href="#">Фото и видео</a></li>
-        </ul>
-        <a href="index.html" class="top_logo"><img width=138 height=70 src="./img/main_menu_logo.png" alt="Логотип"></a>
-        <ul class="menu right">
-          <li><a class="point" href="#">Карта штата</a></li>
-          <li><a class="point current_page" href="#">Гостиницы</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="container">
-      <form class="filter clearfix" action="index.html" method="post">
-        <div class="left clearfix">
-          <fieldset class="infrastructure">
-            <legend class="header">Инфраструктура:</legend>
-            <ul>
-              <li>
-                <input class="flt" type="checkbox" name="pool" id="flt_1">
-                <label for="flt_1">Бассейн</label>
-              </li>
-              <li>
-                <input class="flt" type="checkbox" name="parking" id="flt_2">
-                <label for="flt_2">Парковка</label>
-              </li>
-              <li>
-                <input class="flt" type="checkbox" name="wi_fi" id="flt_3">
-                <label for="flt_3">wi-fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="house_type">
-            <legend class="header">Тип жилья:</legend>
-            <ul>
-              <li>
-                <input class="flt" type="checkbox" name="hotel" id="flt_4">
-                <label for="flt_4">Гостиница</label>
-              </li>
-              <li>
-                <input class="flt" type="checkbox" name="motel" id="flt_5">
-                <label for="flt_5">Мотель</label>
-              </li>
-              <li>
-                <input class="flt" type="checkbox" name="apartment" id="flt_6">
-                <label for="flt_6">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-        <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
-        <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
-        <div class="right clearfix">
-          <fieldset class="price">
-            <legend class="header">Стоимость в сутки(Р):</legend>
-            <div class="from_to">
-              <label class="from">От<input type="text" name="costFrom" value="0"></label>
-              <label class="to">До<input type="text" name="costTo" value="3000"></label>
-            </div>
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
-              </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
-            </div>-
-          </fieldset>
-          <input class="show" type="submit" name="start_search" value="Показать">
-        </div>
-      </form>
-      <div class="search_result clearfix">
-        <div class="header clearfix">
-          <p class="thesis">Найдено: 3</p>
-          <p class="thesis_sort">Сортировка:</p>
-          <div class="sort_result">
-            <ul>
-              <li>
-                <a class="sort current_page" href="#">По цене</a>
-              </li>
-              <li>
-                <a class="sort" href="#">По типу</a>
-              </li>
-              <li>
-                <a class="sort" href="#">По рэйтингу</a>
-              </li>
-            </ul>
+    <div class="container">
+      <header class="main_header clearfix">
+        <nav class="main_navigation clearfix">
+          <ul class="menu left">
+            <li><a class="point" href="#">Информация</a></li>
+            <li><a class="point" href="#">Фото и видео</a></li>
+          </ul>
+          <a href="index.html" class="top_logo"><img width=138 height=70 src="./img/main_menu_logo.png" alt="Логотип"></a>
+          <ul class="menu right">
+            <li><a class="point" href="#">Карта штата</a></li>
+            <li><a class="point current_page" href="#">Гостиницы</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <form class="filter clearfix" action="index.html" method="post">
+          <div class="left clearfix">
+            <fieldset class="infrastructure">
+              <legend class="header">Инфраструктура:</legend>
+              <ul>
+                <li>
+                  <input class="flt" type="checkbox" name="pool" id="flt_1">
+                  <label for="flt_1">Бассейн</label>
+                </li>
+                <li>
+                  <input class="flt" type="checkbox" name="parking" id="flt_2">
+                  <label for="flt_2">Парковка</label>
+                </li>
+                <li>
+                  <input class="flt" type="checkbox" name="wi_fi" id="flt_3">
+                  <label for="flt_3">wi-fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="house_type">
+              <legend class="header">Тип жилья:</legend>
+              <ul>
+                <li>
+                  <input class="flt" type="checkbox" name="hotel" id="flt_4">
+                  <label for="flt_4">Гостиница</label>
+                </li>
+                <li>
+                  <input class="flt" type="checkbox" name="motel" id="flt_5">
+                  <label for="flt_5">Мотель</label>
+                </li>
+                <li>
+                  <input class="flt" type="checkbox" name="apartment" id="flt_6">
+                  <label for="flt_6">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
-          <div class="arrows">
-            <a class="desc" href="#">По убыванию</a>
-            <a class="ask disabled" href="#">По возрастанию</a>
+          <!-- Здесь необходимо сделать двойной ползунок. Из того что я нашёл необходимо использовать jQuery -->
+          <!-- Как я понимаю это мы будем проходить чуть позже. Потому здесь пока пусто -->
+          <div class="right clearfix">
+            <fieldset class="price">
+              <legend class="header">Стоимость в сутки(Р):</legend>
+              <div class="from_to">
+                <label class="from">От<input type="text" name="costFrom" value="0"></label>
+                <label class="to">До<input type="text" name="costTo" value="3000"></label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>-
+            </fieldset>
+            <input class="show" type="submit" name="start_search" value="Показать">
+          </div>
+        </form>
+        <div class="search_result clearfix">
+          <div class="header clearfix">
+            <p class="thesis">Найдено: 3</p>
+            <p class="thesis_sort">Сортировка:</p>
+            <div class="sort_result">
+              <ul>
+                <li>
+                  <a class="sort current_page" href="#">По цене</a>
+                </li>
+                <li>
+                  <a class="sort" href="#">По типу</a>
+                </li>
+                <li>
+                  <a class="sort" href="#">По рэйтингу</a>
+                </li>
+              </ul>
+            </div>
+            <div class="arrows">
+              <a class="desc" href="#">По убыванию</a>
+              <a class="ask disabled" href="#">По возрастанию</a>
+            </div>
+          </div>
+          <div class="result_list">
+            <article class="hotel clearfix">
+              <img class="hotel_photo" width="135" height="90" src="./img/hotels/amara.jpg" alt="hotel">
+              <div class="hotel_description">
+                <a class="name" href="#">Amara resort & spa</a>
+                <div class="hotel_definition clearfix">
+                  <p class="type">Гостиница</p>
+                  <p>от 4000 р.</p>
+                </div>
+                <div class="detail_book clearfix">
+                  <a class="detail blue" href="#">Подробнее</a>
+                  <a class="book brown" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="ratio">
+                <ul class="stars">
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                </ul>
+                <p class="num_ratio">Рейтинг: 8,5</p>
+              </div>
+            </article>
+            <article class="hotel clearfix">
+              <img class="hotel_photo" width="135" height="90" src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
+              <div class="hotel_description">
+                <a class="name" href="#">Desert quail inn</a>
+                <div class="hotel_definition clearfix">
+                  <p class="type">Мотель</p>
+                  <p>от 3000 р.</p>
+                </div>
+                <div class="detail_book clearfix">
+                  <a class="detail blue" href="#">Подробнее</a>
+                  <a class="book brown" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="ratio">
+                <ul class="stars">
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                </ul>
+                <p class="num_ratio">Рейтинг: 8,9</p>
+              </div>
+            </article>
+            <article class="hotel clearfix">
+              <img class="hotel_photo" width="135" height="90" src="./img/hotels/poco_diablo.jpg" alt="hotel">
+              <div class="hotel_description">
+                <a class="name" href="#">Villas at poco diablo</a>
+                <div class="hotel_definition clearfix">
+                  <p class="type">Апартаменты</p>
+                  <p>от 2000 р.</p>
+                </div>
+                <div class="detail_book clearfix">
+                  <a class="detail blue" href="#">Подробнее</a>
+                  <a class="book brown" href="#">Забронировать</a>
+                </div>
+              </div>
+              <div class="ratio">
+                <ul class="stars">
+                  <li class="star">*</li>
+                  <li class="star">*</li>
+                </ul>
+                <p class="num_ratio">Рейтинг: 9,2</p>
+              </div>
+            </article>
           </div>
         </div>
-        <div class="result_list">
-          <article class="hotel clearfix">
-            <img class="hotel_photo" width="135" height="90" src="./img/hotels/amara.jpg" alt="hotel">
-            <div class="hotel_description">
-              <a class="name" href="#">Amara resort & spa</a>
-              <div class="hotel_definition clearfix">
-                <p class="type">Гостиница</p>
-                <p>от 4000 р.</p>
-              </div>
-              <div class="detail_book clearfix">
-                <a class="detail blue" href="#">Подробнее</a>
-                <a class="book brown" href="#">Забронировать</a>
-              </div>
-            </div>
-            <div class="ratio">
-              <ul class="stars">
-                <li class="star">*</li>
-                <li class="star">*</li>
-                <li class="star">*</li>
-                <li class="star">*</li>
-              </ul>
-              <p class="num_ratio">Рейтинг: 8,5</p>
-            </div>
-          </article>
-          <article class="hotel clearfix">
-            <img class="hotel_photo" width="135" height="90" src="./img/hotels/desert_quail_inn.jpg" alt="hotel">
-            <div class="hotel_description">
-              <a class="name" href="#">Desert quail inn</a>
-              <div class="hotel_definition clearfix">
-                <p class="type">Мотель</p>
-                <p>от 3000 р.</p>
-              </div>
-              <div class="detail_book clearfix">
-                <a class="detail blue" href="#">Подробнее</a>
-                <a class="book brown" href="#">Забронировать</a>
-              </div>
-            </div>
-            <div class="ratio">
-              <ul class="stars">
-                <li class="star">*</li>
-                <li class="star">*</li>
-                <li class="star">*</li>
-              </ul>
-              <p class="num_ratio">Рейтинг: 8,9</p>
-            </div>
-          </article>
-          <article class="hotel clearfix">
-            <img class="hotel_photo" width="135" height="90" src="./img/hotels/poco_diablo.jpg" alt="hotel">
-            <div class="hotel_description">
-              <a class="name" href="#">Villas at poco diablo</a>
-              <div class="hotel_definition clearfix">
-                <p class="type">Апартаменты</p>
-                <p>от 2000 р.</p>
-              </div>
-              <div class="detail_book clearfix">
-                <a class="detail blue" href="#">Подробнее</a>
-                <a class="book brown" href="#">Забронировать</a>
-              </div>
-            </div>
-            <div class="ratio">
-              <ul class="stars">
-                <li class="star">*</li>
-                <li class="star">*</li>
-              </ul>
-              <p class="num_ratio">Рейтинг: 9,2</p>
-            </div>
-          </article>
+      </main>
+      <footer class="main_footer">
+        <div class="clearfix">
+          <p class="thesis">#visitsedona</p>
+          <div class="footer-social">
+            <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
+          </div>
+          <div class="producer">
+            <p class="web">Website by</p>
+            <a class="producer_logo" href="https://up.htmlacademy.ru"></a>
+          </div>
         </div>
-      </div>
-    </main>
-    <footer class="main_footer">
-      <div class="container clearfix">
-        <p class="thesis">#visitsedona</p>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tweeter" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-youtube" href="#">Инстаграм</a>
-        </div>
-        <div class="producer">
-          <p class="web">Website by</p>
-          <a class="producer_logo" href="https://up.htmlacademy.ru"></a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
