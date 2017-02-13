@@ -76,6 +76,14 @@ body{
   color: black;
 }
 
+.menu.left li:last-child{
+  padding-left: 30px;
+}
+
+.menu.right li:first-child{
+  padding-right: 30px;
+}
+
 .main_header .point:hover{
   color: #81b3d2;
 }
@@ -440,7 +448,7 @@ body{
   padding: 0px;
   font-size: 21px;
   text-transform: uppercase;
-  margin-top: 25px;
+  margin-top: 23px;
 }
 
 .blue{
@@ -976,7 +984,7 @@ body{
 }
 
 .hotel_definition .type{
-  width: 116px;
+  min-width: 116px;
 }
 
 .hotel_description .detail,
