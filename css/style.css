@@ -276,8 +276,9 @@ body{
 }
 
 .index_map{
-  height: 595px;
-  background: url(./../img/map_index_page.jpg) no-repeat;
+  height: 591px;
+  width: 100%;
+  /*background: url(./../img/map_index_page.jpg) no-repeat;*/
 }
 
 .search_container{
@@ -607,7 +608,6 @@ body{
 /*Фильтр*/
 .filter{
   width: inherit;
-  height: 217px;
   background: url(./../img/bg_hotels_page.jpg) 0px -300px / 100% no-repeat;
   color: white;
   font-size: 14px;
@@ -616,10 +616,12 @@ body{
 .filter .left{
   margin-left: 6%;
   float: left;
+  margin-bottom: 20px;
 }
 
 .filter .right{
   margin-right: 6%;
+  margin-bottom: 20px;
   float: right;
   width: 26.5%
 }
@@ -1050,4 +1052,8 @@ body{
 .definition{
   font-size: 14px;
   color: #333333;
+}
+
+.show_search{
+  display: none;
 }
