@@ -84,11 +84,12 @@ body{
   padding-right: 30px;
 }
 
-.main_header .point:hover{
+.main_header .point:hover:not(.current_page){
   color: #81b3d2;
 }
 
-.main_header .point:active{
+.main_header .point:active:not(.current_page){
+  color: black;
   opacity: 0.3;
 }
 
@@ -278,7 +279,7 @@ body{
 .index_map{
   height: 591px;
   width: 100%;
-  /*background: url(./../img/map_index_page.jpg) no-repeat;*/
+  background: url(./../img/map_index_page.jpg) no-repeat;
 }
 
 .search_container{
@@ -288,15 +289,20 @@ body{
   position: relative;
 }
 
-.search {
+.form_container{
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
   font-weight: bold;
+  overflow: hidden;
+}
+
+.search {
   padding: 55px;
-  position: absolute;
   background-color: white;
   box-sizing: border-box;
+  transition: 1s;
 }
 
 .show_hide{
@@ -823,6 +829,7 @@ body{
   color: white;
   text-transform: uppercase;
   outline: 0;
+  cursor: pointer;
 }
 
 .show:hover{
@@ -1055,5 +1062,5 @@ body{
 }
 
 .show_search{
-  display: none;
+  transform: translateY(-500px);
 }
