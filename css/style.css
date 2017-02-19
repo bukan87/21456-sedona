@@ -100,6 +100,7 @@ body{
 
 .main_logo{
   height: 509px;
+  background-color: #9aa2a9;
   background: url(./../img/bg_footer_index_page.png) left bottom / 100% 57px no-repeat,
               url(./../img/bg_index_page.jpg) 0px /*-83px*/6.91% / 100%;
 }
@@ -131,11 +132,15 @@ body{
   margin-bottom: 0px;
 }
 
+.advantages{
+  background-color: #81b3d2;
+}
+
 .advantages .text_description{
   float: left;
   width: 33.333333%;
   text-align: center;
-  background-color: #81b3d2;
+
   color: white;
 }
 
@@ -167,7 +172,8 @@ body{
 
 .advantages.first,
 .advantages.second{
-  background: url(./../img/advantages/1.jpg) no-repeat;
+  background-image: url(./../img/advantages/1.jpg);
+  background-repeat: no-repeat;
   background-size: 66.666666%;
   background-position: right;
 }
@@ -614,7 +620,7 @@ body{
 /*Фильтр*/
 .filter{
   width: inherit;
-  background: url(./../img/bg_hotels_page.jpg) 0px -300px / 100% no-repeat;
+  background: #99a1a7 url(./../img/bg_hotels_page.jpg) 0px -300px / 100% no-repeat;
   color: white;
   font-size: 14px;
 }
@@ -636,8 +642,6 @@ body{
   font-weight: bold;
   margin: 0;
   padding: 0;
-  margin-bottom: 9px;
-
   font-size: 16px;
   line-height: 21px;
 }
@@ -657,10 +661,6 @@ body{
   cursor: pointer;
   display: block;
   margin-top: 27px;
-}
-
-.filter li:first-of-type label{
-  margin-top: 18px;
 }
 
 .filter label[for^="flt"]::before{
@@ -702,6 +702,10 @@ body{
   padding: 0px;
 }
 
+.price .header{
+  margin-bottom: 9px;
+}
+
 .price{
   position: relative;
   margin: 0;
@@ -736,6 +740,8 @@ body{
   height: 22px;
 
   background: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -767,6 +773,7 @@ body{
   background: none;
   border: none;
   outline: 0;
+  line-height: 1px;
 }
 
 .range-controls {
@@ -1062,5 +1069,7 @@ body{
 }
 
 .show_search{
+  -webkit-transform: translateY(-500px);
+  -ms-transform: translateY(-500px);
   transform: translateY(-500px);
 }
