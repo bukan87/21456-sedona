@@ -148,7 +148,7 @@ body{
   margin-top: 55px;
   font-size: 21px;
   font-weight: bold;
-  width: 160px;
+  width: 151px;
   margin-left: auto;
   margin-right: auto;
   line-height: 20px;
@@ -259,6 +259,7 @@ body{
   padding: 0 11%;
   margin-top: 22px;
   margin-bottom: 59px;
+  max-width: 261px;
 }
 
 .advantage{
