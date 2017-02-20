@@ -1,0 +1,1 @@
+var showHideButton=document.querySelector(".btn.show_hide"),form=document.querySelector(".search");function shoHideSearchForm(a){a.preventDefault();form.classList.toggle("show_search")}showHideButton.addEventListener("click",shoHideSearchForm);document.addEventListener("DOMContentLoaded",shoHideSearchForm);
